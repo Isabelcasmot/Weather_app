@@ -8,14 +8,24 @@ const fetchData = position => {
         .then(data => setWeatherData(data))
 
 
-
-
-
 }
 
 const setWeatherData = data => {
     console.log(data);
+    const weatherData = {
+        location: data.name,
+        description: data.weather[0].main,
+        humidity: data.main.humidity,
+        pressure: data.main.pressure,
+        temperature: data.main.temp,
+        date: 'data',
+    }
 
+    Object.keys(weatherData).forEach(key => {
+        document.getElementById(key).textContent = weatherData[key];
+
+
+    });
 }
 
 const onLoad = () => {
