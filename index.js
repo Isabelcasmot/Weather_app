@@ -26,8 +26,18 @@ const setWeatherData = data => {
 
 
     });
+
+    cleanUp();
 }
 
+const cleanUp = () => {
+    document.getElementById('container');
+    document.getElementById('loader');
+
+    loader.style.display = 'none';
+    container.style.display = 'flex';
+
+}
 
 const getDate = () => {
     let date = new Date();
@@ -38,3 +48,4 @@ const onLoad = () => {
 
     navigator.geolocation.getCurrentPosition(fetchData);
 }
+

@@ -3,21 +3,46 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>WeatherApp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
-    <link rel="style" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body onload="onLoad()">
+
+
     <div id="container">
-        <div id="location"></div>
-        <div id="description"></div>
-        <div id="humidity"></div>
-        <div id="pressure"></div>
-        <div id="temperature"></div>
-        <div id="date"></div>
+
+        <div class="block">
+            <div id="location"></div>
+            <div id="date"></div>
+            <div id="description"></div>
+        </div>
+
+        <div class="block">
+
+            <div class="information-container">
+                Temperature
+                <div class="info" id="temperature"></div>
+            </div>
+
+            <div class="information-container">
+                Pressure
+                <div class="info" id="pressure"></div>
+            </div>
+
+
+            <div class="information-container">
+                Humidity
+                <div class="info" id="humidity"></div>
+            </div>
+
+        </div>
+
+
     </div>
+    <div id="loader" class="loader">Loading...</div>
     <script src="index.js"></script>
 </body>
 
